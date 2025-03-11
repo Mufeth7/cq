@@ -1,4 +1,5 @@
 FROM python:3.9
-COPY . /cq
 WORKDIR /cq
-RUN pip install regex
+COPY . /cq
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python", "cq.py"]
